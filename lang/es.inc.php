@@ -77,7 +77,7 @@ $messages['changehelpquestions'] = "<a href=\"?action=resetbyquestions\">Resetee
 $messages['changehelptoken'] = "<a href=\"?action=sendtoken\">Resetee su contraseña usando su e-mail</a>";
 $messages['changehelpsms'] = "<a href=\"?action=sendsms\">Resetee su contraseña mediante un SMS</a>";
 $messages['resetmessage'] = "Estimado {login},\n\nClick aquí para resetear/cambiar su contraseña de LUCA (Smart Steps):\n{url}\n\n Si usted no es el emisor de esta petición, por favor ignórela. Saludos,
-Smart Steps Servicios de Ingeniera";
+Smart Steps Servicios de Ingeniería";
 $messages['resetsubject'] = "Change your LUCA (Smart Steps) password";
 $messages['sendtokenhelp'] = "Introduzca su nombre de usuario y e-mail para reiniciar su contraseña. Luego haga click en el enlace que le llegará en el e-mail.";
 $messages['sendtokenhelpnomail'] = "Introduzca su nombre de usuario para reiniciar su contraseña. Luego haga click en el enlace que le llegará en el e-mail.";
