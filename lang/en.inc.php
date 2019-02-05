@@ -45,7 +45,7 @@ $messages['confirmpassword'] = "Confirm";
 $messages['submit'] = "Send";
 $messages['getuser'] = "Get user";
 $messages['tooshort'] = "Invalid password: the length must be at least 8 characters and contain at least one number and one alphanumeric character";
-$messages['toobig'] = "Invalid password: the length must be at least 8 characters and contain at least one number and one alphanumeric character";
+$messages['toobig'] = "Your password is too big";
 $messages['minlower'] = "Invalid password: the length must be at least 8 characters and contain at least one number and one alphanumeric character";
 $messages['minupper'] = "Invalid password: the length must be at least 8 characters and contain at least one number and one alphanumeric character";
 $messages['mindigit'] = "Invalid password: the length must be at least 8 characters and contain at least one number and one alphanumeric character";
@@ -84,7 +84,7 @@ $messages['changehelpsshkey'] = "<a href=\"?action=changesshkey\">Change your SS
 $messages['changesshkeyhelp'] = "Enter your password and new SSH key.";
 $messages['resetmessage'] = "Dear {login},\n\nPlease click here to reset/change your LUCA (Smart Steps) password:\n{url}\n\nIf you didn't request a password reset, please ignore this email. Best regards,
 Smart Steps Engineering";
-$messages['resetsubject'] = "Change your LUCA (Smart Steps) pwd";
+$messages['resetsubject'] = "Change your LUCA (Smart Steps) password";
 $messages['sendtokenhelp'] = "Enter your user name and your email address to reset your password. When you receive the email, click the link inside to complete the password reset.";
 $messages['sendtokenhelpnomail'] = "Enter your user name to reset your password. An email will be sent to the address associated with the supplied user name. When you receive this email, click the link inside to complete the password reset.";
 $messages['mail'] = "Mail";
