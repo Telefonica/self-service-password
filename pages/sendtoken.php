@@ -224,16 +224,16 @@ if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcrede
       <div class="modal-form__container">
         <div class="header">
           <h1 class="bx--type-h1"> Smart STEPS </h1>
-          <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+          <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="login">Usuario</label>
-            <input id="login" class="form-group__input input-user" placeholder="Username" name="login">
+            <label class="form-group__label" for="login"><?php echo $messages['username']; ?></label>
+            <input id="login" class="form-group__input input-user" placeholder="<?php echo $messages['username']; ?>" name="login">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="mail">Correo electrónico</label>
-            <input id="mail" class="form-group__input input-pass" placeholder="Correo electrónico" name="mail" type="email">
+            <label class="form-group__label" for="mail"><?php echo $messages['mail']; ?></label>
+            <input id="mail" class="form-group__input input-pass" placeholder="<?php echo $messages['mail']; ?>" name="mail" type="email">
           </div>
           <div class="form-group">
             <button type="submit" class="c-btn btn-primary btn-medium">
