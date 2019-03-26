@@ -3,11 +3,11 @@
       <div class="modal-form__container">
          <div class="header">
             <h1 class="bx--type-h1"> Smart STEPS </h1>
-            <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+            <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
          </div>
          <div class="success-page">
             <div class="success-page__content">
-               <p class="bx--type-p"> Contraseña inválida: la longitud debe ser de al menos 8 caracteres y contener al menos un número y una letra. </p>
+               <p class="bx--type-p"> <?php echo $messages['minspecial']; ?> </p>
                <figure>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.1 21.1" class="aspa">
                      <defs>

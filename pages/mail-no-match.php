@@ -3,11 +3,11 @@
       <div class="modal-form__container">
          <div class="header">
             <h1 class="bx--type-h1"> Smart STEPS </h1>
-            <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+            <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
          </div>
          <div class="success-page">
             <div class="success-page__content">
-               <p class="bx--type-p"> Error: usuario o e-mail erróneo. </p>
+               <p class="bx--type-p"> <?php echo $messages['mailnomatch']; ?> </p>
                <figure>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.1 21.1" class="aspa">
                      <defs>

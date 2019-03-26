@@ -3,11 +3,11 @@
       <div class="modal-form__container">
          <div class="header">
             <h1 class="bx--type-h1"> Smart STEPS </h1>
-            <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+            <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
          </div>
          <div class="success-page">
             <div class="success-page__content">
-               <p class="bx--type-p"> Enhorabuena, su contraseña ha sido actualizada. </p>
+               <p class="bx--type-p"><?php echo $messages['passwordchanged']; ?></p>
                      <figure>
                 <?xml version="1.0" encoding="UTF-8"?>
                 <svg width="81px" height="81px" viewBox="0 0 81 81" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

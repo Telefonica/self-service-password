@@ -186,8 +186,8 @@ if ( $result === "" ) {
 if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcredentials"; }
 ?>
 
-<?php   if ($result == "badcredentials") {
-            include("bad-credentials.php");
+<?php   if ($result == "badcredentials" or $result == "minspecial" or $result == "mindigit" or $result == "minspecial") {
+            include("errorpage.php");
         }
         elseif ( $result !== "passwordchanged" ) { ?>
 
@@ -204,7 +204,7 @@ if ($pwd_show_policy_pos === 'above') {
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Smart Steps</title>
+  <title>Smart STEPS</title>
   <link href="../css/site-bf872215389ce9bdfed0fb044f437dc9-801413a6.css" rel="stylesheet" />
   <link href="../images/favicon-32x32-e02d4900.png" rel="icon" type="image/png" />
 </head>
@@ -215,32 +215,32 @@ if ($pwd_show_policy_pos === 'above') {
       <div class="modal-form__container">
         <div class="header">
           <h1 class="bx--type-h1"> Smart STEPS </h1>
-          <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+          <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="login">Usuario</label>
-            <input id="login" class="form-group__input input-user" placeholder="Usuario" name="login">
+            <label class="form-group__label" for="login"><?php echo $messages['username']; ?></label>
+            <input id="login" class="form-group__input input-user" placeholder="<?php echo $messages['username']; ?>" name="login">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="oldpassword">Contraseña actual</label>
-            <input id="oldpassword" class="form-group__input input-pass" type="password" placeholder="Contraseña actual" name="oldpassword">
+            <label class="form-group__label" for="oldpassword"><?php echo $messages['oldpassword']; ?></label>
+            <input id="oldpassword" class="form-group__input input-pass" type="password" placeholder="<?php echo $messages['oldpassword']; ?>" name="oldpassword">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="newpassword">Nueva contraseña</label>
-            <input id="newpassword" class="form-group__input input-pass" type="password" placeholder="Contraseña nueva" name="newpassword">
+            <label class="form-group__label" for="newpassword"><?php echo $messages['newpassword']; ?></label>
+            <input id="newpassword" class="form-group__input input-pass" type="password" placeholder="<?php echo $messages['newpassword']; ?>" name="newpassword">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="confirmpassword">Confirmar nueva contraseña</label>
-            <input id="confirmpassword" class="form-group__input input-pass" type="password" placeholder="Confirmar nueva contraseña"
+            <label class="form-group__label" for="confirmpassword"><?php echo $messages['confirmpassword']; ?></label>
+            <input id="confirmpassword" class="form-group__input input-pass" type="password" placeholder="<?php echo $messages['confirmpassword']; ?>"
               name="confirmpassword">
             </div>
           <div class="form-group">
             <button type="submit" class="c-btn btn-primary btn-medium">
               <?php echo $messages['submit']; ?>
             </button>
-            <p class="p--type-p u-text-center form-group-p">¿Olvidó su contraseña?
-              <a href="index.php?action=sendtoken" title="Resetear con mi e-mail" class="reset-password">Resetear con mi e-mail</a>
+            <p class="p--type-p u-text-center form-group-p"><?php echo $messages['changehelpreset']; ?>
+              <a href="index.php?action=sendtoken" title="Resetear con mi e-mail" class="reset-password"><?php echo $messages['emptysendtokenform']; ?></a>
             </p>
           </div>
         </form>

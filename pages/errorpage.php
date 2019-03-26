@@ -7,7 +7,7 @@
          </div>
          <div class="success-page">
             <div class="success-page__content">
-               <p class="bx--type-p"> <?php echo $messages['tokennotvalid']; ?></p>
+               <p class="bx--type-p"> <?php echo $messages[$result]; ?> </p>
                <figure>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.1 21.1" class="aspa">
                      <defs>

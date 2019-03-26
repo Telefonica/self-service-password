@@ -210,30 +210,13 @@ if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcrede
 
 <?php } ?>
 
-<?php if ( $result == "tokennotvalid" ) {
-        include("token-not-valid.php");
+<?php if ( $result == "tokennotvalid" or $result == "minspecial" ) {
+        include("errorpage.php");
       }
       elseif ( $result == "passwordchanged" ) {
-        include("password-changed.php");
-      }
-      elseif ( $result == "minspecial" ) {
-        include("min-special.php");
+        include("successpage.php");
       }
       elseif ( $result !== "passwordchanged" ) { ?>
-
-<?php
-if ( $show_help and ($source !== "sms") ) {
-    echo "<div class=\"bx--type-legend\"><p>";
-    echo "<i class=\"fa fa-fw fa-info-circle\"></i> ";
-    echo $messages["resetbytokenhelp"];
-    echo "</p></div>\n";
-} elseif ( $show_help and ($source === "sms") ) {
-    echo "<div class=\"help alert alert-warning\"><p>";
-    echo "<i class=\"fa fa-fw fa-info-circle\"></i> ";
-    echo $messages["resetbysmshelp"];
-    echo "</p></div>\n";
-}
-?>
 
 <?php if ( $result !== "tokenrequired" and $result !== "tokennotvalid"  ) { ?>
 
@@ -257,28 +240,28 @@ if ($pwd_show_policy_pos === 'above') {
       <div class="modal-form__container">
         <div class="header">
           <h1 class="bx--type-h1"> Smart STEPS </h1>
-          <h2 class="bx--type-h3"> Actualizar contraseña </h2>
+          <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="login">Usuario</label>
+            <label class="form-group__label" for="login"><?php echo $messages['login']; ?></label>
             <input id="login" class="form-group__input input-user" placeholder="Usuario" name="login">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="newpassword">Nueva contraseña</label>
-            <input id="newpassword" class="form-group__input input-pass" type="password" placeholder="Contraseña nueva" name="newpassword">
+            <label class="form-group__label" for="newpassword"><?php echo $messages['newpassword']; ?></label>
+            <input id="newpassword" class="form-group__input input-pass" type="password" placeholder="<?php echo $messages['newpassword']; ?>" name="newpassword">
           </div>
           <div class="form-group col-xs">
-            <label class="form-group__label" for="confirmpassword">Confirmar nueva contraseña</label>
-            <input id="confirmpassword" class="form-group__input input-pass" type="password" placeholder="Confirmar nueva contraseña"
+            <label class="form-group__label" for="confirmpassword"><?php echo $messages['confirmpassword']; ?></label>
+            <input id="confirmpassword" class="form-group__input input-pass" type="password" placeholder="<?php echo $messages['confirmpassword']; ?>"
               name="confirmpassword">
             </div>
           <div class="form-group">
             <button type="submit" class="c-btn btn-primary btn-medium">
               <?php echo $messages['submit']; ?>
             </button>
-            <p class="p--type-p u-text-center form-group-p">¿Olvidó su contraseña?
-              <a href="index.php?action=sendtoken" title="Resetear con mi e-mail" class="reset-password">Resetear con mi e-mail</a>
+            <p class="p--type-p u-text-center form-group-p"><?php echo $messages['changehelpreset']; ?>
+              <a href="index.php?action=sendtoken" title="Resetear con mi e-mail" class="reset-password"><?php echo $messages['emptysendtokenform']; ?></a>
             </p>
           </div>
         </form>
