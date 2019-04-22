@@ -186,7 +186,7 @@ if ( $result === "" ) {
 if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcredentials"; }
 ?>
 
-<?php   if ($result == "badcredentials" or $result == "minspecial" or $result == "mindigit" or $result == "minspecial") {
+<?php   if ($result == "badcredentials" or $result == "minspecial" or $result == "mindigit" or $result == "minspecial" or $result == "passworderror") {
             include("errorpage.php");
         }
         elseif ( $result !== "passwordchanged" ) { ?>
