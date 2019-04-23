@@ -2,7 +2,7 @@
    <div class="modal-form">
       <div class="modal-form__container">
          <div class="header">
-            <h1 class="bx--type-h1"> Smart STEPS </h1>
+            <h1 class="bx--type-h1"> Smart Steps </h1>
             <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
          </div>
          <div class="success-page">

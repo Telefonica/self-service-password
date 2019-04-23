@@ -210,7 +210,7 @@ if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcrede
 
 <?php } ?>
 
-<?php if ( $result == "tokennotvalid" or $result == "minspecial" ) {
+<?php if ( $result == "tokennotvalid" or $result == "minspecial" or $result == "passworderror" ) {
         include("errorpage.php");
       }
       elseif ( $result == "passwordchanged" ) {
@@ -239,7 +239,7 @@ if ($pwd_show_policy_pos === 'above') {
     <div class="modal-form">
       <div class="modal-form__container">
         <div class="header">
-          <h1 class="bx--type-h1"> Smart STEPS </h1>
+          <h1 class="bx--type-h1"> Smart Steps </h1>
           <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>

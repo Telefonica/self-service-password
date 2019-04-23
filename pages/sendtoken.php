@@ -211,19 +211,16 @@ if ( $result === "" ) {
 if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcredentials"; }
 ?>
 
-<?php if ( $result == "mailnomatch" ) {
-          include("mail-no-match.php");
+<?php if ( $result == "mailnomatch" or $result == "badcredentials" ) {
+          include("errorpage.php");
       }
-      elseif ( $result == "badcredentials" ) {
-        include("bad-credentials.php");
-      }
-      elseif ( $result !== "tokensent" ) { ?>
+      elseif ($result !== "tokensent") { ?>
 
 <div class="main">
     <div class="modal-form">
       <div class="modal-form__container">
         <div class="header">
-          <h1 class="bx--type-h1"> Smart STEPS </h1>
+          <h1 class="bx--type-h1"> Smart Steps </h1>
           <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>
