@@ -204,7 +204,7 @@ if ($pwd_show_policy_pos === 'above') {
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Smart STEPS</title>
+  <title>Smart Steps</title>
   <link href="../css/site-bf872215389ce9bdfed0fb044f437dc9-801413a6.css" rel="stylesheet" />
   <link href="../images/favicon-32x32-e02d4900.png" rel="icon" type="image/png" />
 </head>
