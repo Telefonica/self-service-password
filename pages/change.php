@@ -186,7 +186,7 @@ if ( $result === "" ) {
 if ( in_array($result, array($obscure_failure_messages)) ) { $result = "badcredentials"; }
 ?>
 
-<?php   if ($result == "badcredentials" or $result == "minspecial" or $result == "mindigit" or $result == "minspecial" or $result == "passworderror") {
+<?php   if ($result == "badcredentials" or $result == "minspecial" or $result == "mindigit" or $result == "tokennotvalid" or $result == "passworderror" or $result == "mailnomatch") {
             include("errorpage.php");
         }
         elseif ( $result !== "passwordchanged" ) { ?>
@@ -204,7 +204,7 @@ if ($pwd_show_policy_pos === 'above') {
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Smart STEPS</title>
+  <title>Smart Steps</title>
   <link href="../css/site-bf872215389ce9bdfed0fb044f437dc9-801413a6.css" rel="stylesheet" />
   <link href="../images/favicon-32x32-e02d4900.png" rel="icon" type="image/png" />
 </head>
@@ -214,7 +214,7 @@ if ($pwd_show_policy_pos === 'above') {
     <div class="modal-form">
       <div class="modal-form__container">
         <div class="header">
-          <h1 class="bx--type-h1"> Smart STEPS </h1>
+          <h1 class="bx--type-h1"> Smart Steps </h1>
           <h2 class="bx--type-h3"> <?php echo $messages['title']; ?> </h2>
         </div>
         <form id="main" class="form-horizontal" action="#" method="post" novalidate>
